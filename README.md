@@ -136,14 +136,26 @@ Set enabled to true to use Kong.
 
 
 useHostnames set to true will use the hostnames already created for the different services.
-Either create a wildcard for your hostnames
+```bash
+Kong will use the existing hostnames:
+monitoring.grafana.hostname
+monitoring.homer.hostname
+webapp.hostname
+api.hostname
+
+If api.hostname is api.domainname.com
+then create a DNS A record to point api.domainname.com to the Kong gateway ingress address
+
+```
+
 
 useHostnames set to false will us the Kong IP address with prefixes.
 ```bash
-<IP>/api
-<IP>/webapp
-<IP>/grafana
-<IP>/homer
+Example: if your IP is 204.244.11.3 then to access Jambonz:
+http://204.244.11.3/api
+http://204.244.11.3/webapp
+http://204.244.11.3/grafana
+http://204.244.11.3/homer
 ```
 
 
