@@ -149,7 +149,7 @@ then create a DNS A record to point api.domainname.com to the Kong gateway ingre
 ```
 
 
-useHostnames set to false will us the Kong IP address with prefixes.
+useHostnames set to false will use the Kong IP address with prefixes.
 ```bash
 Example: if your IP is 204.244.11.3 then to access Jambonz:
 http://204.244.11.3/api
